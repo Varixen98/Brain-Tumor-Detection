@@ -1,4 +1,4 @@
-<h1>Brain Tumor Detection (Classification + Segmentation)</h1>
+<h1>Brain Tumor Detection (Classification + Detection)</h1>
 <p>Ini merupakan project universitas dari mata kuliah computer vision.
   <br>
   Project ini menggunakan dataset dari Brisc2025:
