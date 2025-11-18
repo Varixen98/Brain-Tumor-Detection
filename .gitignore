@@ -1,0 +1,7 @@
+# ignore directory/folder
+dataset/
+
+
+# ignore certain datatype
+*.joblib
+*.pt
