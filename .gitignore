@@ -3,7 +3,6 @@ dataset/
 
 
 # ignore certain datatype
-*.joblib
 *.pt
 *.docx
 
