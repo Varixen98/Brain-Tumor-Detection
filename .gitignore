@@ -5,3 +5,7 @@ dataset/
 # ignore certain datatype
 *.joblib
 *.pt
+*.docx
+
+#untuk sementara DO NOT PUSH IPYNB
+*.ipynb
