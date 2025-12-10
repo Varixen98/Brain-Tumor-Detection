@@ -61,7 +61,8 @@ export default function PredictionPage() {
       formData.append("file", image);
 
       // Call your FastAPI backend
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      const response = await fetch(`${apiUrl}/predict`, {
         method: "POST",
         body: formData,
       });
