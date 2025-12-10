@@ -9,7 +9,7 @@ export default function Navbar(){
                 </div>
                 
                 <div className="h-fit w-fit">
-                    <a href="#" className="font-noto text-[18px] font-bold text-white hover:bg-white/15 px-4 py-2 rounded-4xl">Docs</a>
+                    <a href="/about" className="font-noto text-[18px] font-bold text-white hover:bg-white/15 px-4 py-2 rounded-4xl">Docs</a>
                 </div>
             </nav>
        </header> 
