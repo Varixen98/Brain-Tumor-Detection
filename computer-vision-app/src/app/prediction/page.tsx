@@ -65,6 +65,7 @@ export default function PredictionPage() {
         method: "POST",
         body: formData,
       });
+      
 
       if (!response.ok) {
         throw new Error("Failed to process image");
