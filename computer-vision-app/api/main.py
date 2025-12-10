@@ -24,12 +24,10 @@ SCALER_PATH = os.path.join(BASE_DIR, "model", "scaler.joblib")
 # initialisasi app
 app = FastAPI()
 
-origins = ["http://localhost:3000"]
-
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"], # yang memungkinkan GET, DELETE, POST, PUT
     allow_headers=["*"],
