@@ -7,10 +7,10 @@ export default function About(){
 
 
     return (
-        <div className="flex flex-col items-center relative min-w-screen min-h-screen overflow-hidden">
+        <div className="flex flex-col items-center relative w-full h-full overflow-x-hidden">
         
               {/* background */}
-            <div className="min-h-screen inset-0 -z-10 absolute">
+            <div className="h-screen inset-0 fixed -z-10">
                 <DarkVeil
                     hueShift={360}
                     noiseIntensity={0}
@@ -38,31 +38,42 @@ export default function About(){
                   The frontend is deployed using Vercel.com with Next.js Framework.
                 </p>
             
-            <div className="w-full grid grid-cols-2 gap-10">
-               
-                <div className="flex flex-col gap-2 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] max-w-4xl mx-auto mt-4">
-                    <h4 className="text-2xl font-noto font-bold text-white text-center">
-                        The preprocessing consist of:
-                    </h4>
-                    <ul className="font-noto font-light text-white text-center">
-                        <li>Grayscaled: convert 3 class image to 1 class</li>
-                        <li>Smoothing: Reduce noise of the image using GaussianBlur</li>
-                        <li>Enhancing: Increase contrast of the smoothed image using CLAHE</li>
-                    </ul>
-                </div>
+                <div className="w-full grid grid-cols-2 gap-10">
                 
-                <div className="flex flex-col gap-2 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] max-w-4xl mx-auto mt-4">
-                    <h4 className="text-2xl font-noto font-bold text-white text-center">
-                        The Feature Extraction consist of:
-                    </h4>
-                    <ul className="font-noto font-light text-white text-center">
-                        <li>Local Binary Pattern (LBP): Extract brain tumor texture </li>
-                        <li>Histogram Oriented Gradient (HOG): Extract the brain tumor shape/structure</li>
-                        <li>Gray Level Co-Ocurrence Matrix (GLCM): Extract brain tissue texture</li>
-                    </ul>
+                    <div className="flex flex-col gap-2 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] max-w-4xl mx-auto mt-4">
+                        <h4 className="text-2xl font-noto font-bold text-white text-center">
+                            The preprocessing consist of:
+                        </h4>
+                        <ul className="font-noto font-light text-white text-center">
+                            <li>Grayscaled: convert 3 class image to 1 class</li>
+                            <li>Smoothing: Reduce noise of the image using GaussianBlur</li>
+                            <li>Enhancing: Increase contrast of the smoothed image using CLAHE</li>
+                        </ul>
+                    </div>
+                    
+                    <div className="flex flex-col gap-2 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] max-w-4xl mx-auto mt-4">
+                        <h4 className="text-2xl font-noto font-bold text-white text-center">
+                            The Feature Extraction consist of:
+                        </h4>
+                        <ul className="font-noto font-light text-white text-center">
+                            <li>Local Binary Pattern (LBP): Extract brain tumor texture </li>
+                            <li>Histogram Oriented Gradient (HOG): Extract the brain tumor shape/structure</li>
+                            <li>Gray Level Co-Ocurrence Matrix (GLCM): Extract brain tissue texture</li>
+                            <li>Then these three features are stacked vertically</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-                
+
+                <div className="flex flex-col items-center justify-center gap-2 mt-8 mb-5 bg-white/10 backdrop-blur-md pt-2 pb-10 px-10 rounded-4xl">
+                    <h3 className="font-noto text-2xl text-white">Accuracy (Precision and Recall)</h3>
+                    <img src="/accuracy.png" alt="accuracy" className="w-[700px] rounded-2xl"/>
+                </div>
+
+                <div className="flex flex-col items-center justify-center gap-2 mt-8 mb-5 bg-white/10 backdrop-blur-md pt-2 pb-10 px-10 rounded-4xl">
+                    <h3 className="font-noto text-2xl text-white">Confusion Matrix</h3>
+                    <img src="/output.png" alt="confusion matrix" className="w-[700px] rounded-2xl"/>
+                </div>
+            
             </div>
         </div>
     );

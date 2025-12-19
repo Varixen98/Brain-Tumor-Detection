@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* content */}
       <div className="flex flex-col items-center justify-center gap-10 mt-20">
-        <h3 className="font-noto font-bold text-white text-3xl">Brain Tumor Detection APP</h3>
+        <h3 className="font-noto font-bold text-white text-3xl">Brain Tumor Classification APP</h3>
         <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)] max-w-4xl mx-auto mt-4">
           <p className="font-noto font-light text-white text-center">
             Using Support Vector Machine Classifier (SVC)
